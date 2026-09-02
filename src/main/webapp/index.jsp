@@ -7,7 +7,7 @@
     <meta name="description" content="NexusShop — Modern premium e-commerce experience">
     <meta name="theme-color" content="#0b1220">
 
-    <title>NexusShop — Modern E-Commerce</title>
+    <title>NexusShop — Premium Modern E-Commerce</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1875,6 +1875,237 @@
                 height: 220px;
             }
         }
+
+
+/* =========================================================
+   NEXUSSHOP 2026 UI REFRESH
+   Premium glass / editorial e-commerce layer
+========================================================= */
+:root {
+    --accent: #7c3aed;
+    --accent-2: #06b6d4;
+    --primary: #0f172a;
+    --primary-2: #1e293b;
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --surface-2: #f0f3f8;
+    --radius: 20px;
+    --radius-lg: 32px;
+}
+
+body.dark {
+    --accent: #a78bfa;
+    --accent-2: #22d3ee;
+    --primary: #f8fafc;
+    --primary-2: #e2e8f0;
+}
+
+body {
+    background:
+        radial-gradient(circle at 8% 4%, rgba(124,58,237,.07), transparent 24%),
+        radial-gradient(circle at 92% 10%, rgba(6,182,212,.06), transparent 22%),
+        var(--bg);
+}
+
+.topbar {
+    background: linear-gradient(90deg, #0f172a, #1e1b4b, #0f172a);
+}
+
+header {
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    box-shadow: 0 8px 30px rgba(15,23,42,.05);
+}
+
+.brand-icon {
+    border-radius: 14px;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    box-shadow: 0 10px 28px rgba(124,58,237,.25);
+}
+
+.search-box {
+    width: 290px;
+    background: color-mix(in srgb, var(--surface-2) 90%, transparent);
+    border-color: var(--border);
+}
+
+.icon-button {
+    border: 1px solid transparent;
+}
+
+.icon-button:hover {
+    border-color: rgba(124,58,237,.18);
+}
+
+.hero {
+    min-height: 660px;
+    background:
+        linear-gradient(90deg, rgba(4,8,20,.96) 0%, rgba(9,12,30,.78) 46%, rgba(9,12,30,.22) 100%),
+        url("https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=2000&q=92") center / cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: 8%;
+    top: 16%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(6,182,212,.22), transparent 68%);
+    filter: blur(4px);
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-badge {
+    border-color: rgba(255,255,255,.2);
+    background: rgba(255,255,255,.10);
+    box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 86px);
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #22d3ee, #a78bfa 55%, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero-stats {
+    gap: 0;
+    margin-top: 48px;
+    padding: 14px 0;
+}
+
+.hero-stat {
+    min-width: 145px;
+    padding: 0 24px;
+    border-left: 1px solid rgba(255,255,255,.14);
+}
+.hero-stat:first-child { padding-left: 0; border-left: 0; }
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(6,182,212,.10));
+    color: #6d28d9;
+}
+body.dark .eyebrow { color: #c4b5fd; }
+
+.section-title {
+    letter-spacing: -.05em;
+}
+
+.category-card,
+.product-card,
+.testimonial {
+    border-color: color-mix(in srgb, var(--border) 85%, rgba(124,58,237,.15));
+    box-shadow: 0 8px 30px rgba(15,23,42,.055);
+}
+
+.category-card:hover,
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 55px rgba(15,23,42,.12);
+}
+
+.category-icon {
+    background: linear-gradient(135deg, rgba(124,58,237,.12), rgba(6,182,212,.12));
+    color: #7c3aed;
+}
+
+.product-image {
+    height: 270px;
+}
+
+.product-image::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 35%;
+    background: linear-gradient(transparent, rgba(0,0,0,.10));
+    pointer-events: none;
+}
+
+.product-badge {
+    border-radius: 999px;
+    padding: 7px 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.wishlist-btn {
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
+.product-body {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 22px;
+}
+
+.add-cart {
+    border-radius: 999px;
+    background: linear-gradient(135deg, #111827, #334155);
+    box-shadow: 0 8px 20px rgba(15,23,42,.12);
+}
+
+body.dark .add-cart {
+    background: linear-gradient(135deg, #f8fafc, #cbd5e1);
+}
+
+.deal-card {
+    border: 1px solid rgba(255,255,255,.08);
+    background: linear-gradient(135deg, #090e1b, #1e1b4b 58%, #083344);
+}
+
+.deal-image {
+    min-height: 480px;
+}
+
+.time-box {
+    min-width: 78px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+}
+
+.newsletter {
+    box-shadow: 0 25px 70px rgba(15,23,42,.15);
+}
+
+.cart-drawer {
+    width: min(460px, 100%);
+}
+
+@media (max-width: 800px) {
+    .hero { min-height: 680px; }
+    .hero-stats { margin-top: 36px; }
+    .hero-stat { min-width: 120px; padding: 0 14px; }
+    .product-image { height: 200px; }
+}
+
+@media (max-width: 600px) {
+    .section { padding: 72px 0; }
+    .hero h1 { font-size: 44px; }
+    .hero-stat { min-width: 105px; padding: 0 10px; }
+    .hero-stat strong { font-size: 17px; }
+    .hero-stat span { font-size: 10px; }
+    .product-image { height: 185px; }
+}
+
     </style>
 </head>
 
@@ -2164,6 +2395,19 @@
 
     </div>
 
+</section>
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+<section class="trust-strip" aria-label="Shopping benefits">
+    <div class="container trust-grid">
+        <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><div><strong>Free & fast delivery</strong><span>On qualifying orders</span></div></div>
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><div><strong>Secure checkout</strong><span>Your payment is protected</span></div></div>
+        <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><div><strong>Easy returns</strong><span>Simple 30-day returns</span></div></div>
+        <div class="trust-item"><i class="fa-solid fa-headset"></i><div><strong>24/7 support</strong><span>We're here to help</span></div></div>
+    </div>
 </section>
 
 
