@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-      content="NexusShop — Premium modern e-commerce experience">
+      content="NexusShop — Vibrant multi-colour modern e-commerce experience">
 
-<title>NexusShop — Premium E-Commerce</title>
+<title>NexusShop — Vibrant Multi-Colour E-Commerce</title>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,32 +26,38 @@
    GLOBAL
 ========================================================= */
 
-:root {
-    --primary: #635bff;
-    --primary-dark: #5147e8;
-    --secondary: #8b5cf6;
+    :root {
+        --primary: #7c3aed;
+        --primary-dark: #5b21b6;
+        --secondary: #06b6d4;
+        --pink: #ec4899;
+        --orange: #f97316;
+        --yellow: #eab308;
+        --green: #10b981;
+        --blue: #3b82f6;
+        --red: #ef4444;
 
-    --bg: #f7f8fc;
-    --surface: #ffffff;
-    --surface-2: #f1f3f8;
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface-2: #f1f5f9;
 
-    --text: #151827;
-    --muted: #70758a;
-    --border: #e6e8ef;
+        --text: #111827;
+        --muted: #64748b;
+        --border: #e2e8f0;
 
-    --success: #18a66b;
-    --danger: #ef476f;
+        --success: #10b981;
+        --danger: #ef476f;
 
-    --shadow-sm: 0 8px 25px rgba(25, 31, 56, .06);
-    --shadow-md: 0 18px 50px rgba(25, 31, 56, .10);
-    --shadow-lg: 0 30px 80px rgba(25, 31, 56, .16);
+        --shadow-sm: 0 8px 25px rgba(30, 41, 59, .07);
+        --shadow-md: 0 18px 50px rgba(30, 41, 59, .12);
+        --shadow-lg: 0 30px 80px rgba(30, 41, 59, .18);
 
-    --radius-sm: 12px;
-    --radius-md: 20px;
-    --radius-lg: 30px;
+        --radius-sm: 12px;
+        --radius-md: 20px;
+        --radius-lg: 30px;
 
-    --transition: .25s ease;
-}
+        --transition: .25s ease;
+    }
 
 [data-theme="dark"] {
     --bg: #0d1020;
@@ -970,6 +976,231 @@ a {
     opacity: 1;
 }
 
+
+/* =========================================================
+   MULTI-COLOUR UI ENHANCEMENTS
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(circle at 5% 5%, rgba(124,58,237,.08), transparent 22%),
+        radial-gradient(circle at 95% 18%, rgba(6,182,212,.08), transparent 24%),
+        radial-gradient(circle at 20% 85%, rgba(236,72,153,.07), transparent 25%),
+        var(--bg);
+}
+
+/* Rainbow announcement strip */
+.top-bar {
+    background: linear-gradient(90deg, #7c3aed, #3b82f6, #06b6d4, #10b981, #eab308, #f97316, #ec4899);
+    background-size: 300% 100%;
+    animation: rainbowShift 10s linear infinite;
+    color: #fff;
+    font-weight: 700;
+}
+
+@keyframes rainbowShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* Colourful logo */
+.logo span {
+    background: linear-gradient(90deg, #7c3aed, #ec4899, #f97316, #eab308);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Navigation hover colours */
+.nav-links a:nth-child(1):hover { color: #7c3aed; }
+.nav-links a:nth-child(2):hover { color: #06b6d4; }
+.nav-links a:nth-child(3):hover { color: #10b981; }
+.nav-links a:nth-child(4):hover { color: #f97316; }
+.nav-links a:nth-child(5):hover { color: #ec4899; }
+
+/* Hero becomes a vivid multi-colour gradient */
+.hero-wrapper {
+    background:
+        radial-gradient(circle at 12% 15%, rgba(236,72,153,.45), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(6,182,212,.40), transparent 30%),
+        radial-gradient(circle at 78% 90%, rgba(124,58,237,.48), transparent 34%),
+        radial-gradient(circle at 25% 90%, rgba(249,115,22,.30), transparent 28%),
+        linear-gradient(135deg, #111827 0%, #312e81 48%, #164e63 100%);
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #67e8f9, #a78bfa, #f9a8d4, #fdba74);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Gradient primary buttons */
+.btn-primary,
+.add-cart,
+.checkout-btn {
+    background: linear-gradient(135deg, #7c3aed, #ec4899 55%, #f97316);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #6d28d9, #db2777 55%, #ea580c);
+    box-shadow: 0 14px 34px rgba(236,72,153,.28);
+}
+
+/* Benefit cards get individual accent colours */
+.benefit:nth-child(1) .benefit-icon {
+    background: rgba(59,130,246,.12);
+    color: #2563eb;
+}
+.benefit:nth-child(2) .benefit-icon {
+    background: rgba(16,185,129,.12);
+    color: #059669;
+}
+.benefit:nth-child(3) .benefit-icon {
+    background: rgba(249,115,22,.12);
+    color: #ea580c;
+}
+.benefit:nth-child(4) .benefit-icon {
+    background: rgba(236,72,153,.12);
+    color: #db2777;
+}
+
+/* Category cards */
+.category-card:nth-child(1) .category-icon {
+    background: rgba(59,130,246,.12);
+    color: #2563eb;
+}
+.category-card:nth-child(2) .category-icon {
+    background: rgba(236,72,153,.12);
+    color: #db2777;
+}
+.category-card:nth-child(3) .category-icon {
+    background: rgba(16,185,129,.12);
+    color: #059669;
+}
+.category-card:nth-child(4) .category-icon {
+    background: rgba(124,58,237,.12);
+    color: #7c3aed;
+}
+.category-card:nth-child(5) .category-icon {
+    background: rgba(249,115,22,.12);
+    color: #ea580c;
+}
+
+.category-card:nth-child(1):hover { border-color: rgba(59,130,246,.45); }
+.category-card:nth-child(2):hover { border-color: rgba(236,72,153,.45); }
+.category-card:nth-child(3):hover { border-color: rgba(16,185,129,.45); }
+.category-card:nth-child(4):hover { border-color: rgba(124,58,237,.45); }
+.category-card:nth-child(5):hover { border-color: rgba(249,115,22,.45); }
+
+/* Product cards receive a colourful top accent */
+.product-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    z-index: 2;
+    background: linear-gradient(90deg, #7c3aed, #06b6d4, #10b981, #eab308, #f97316, #ec4899);
+}
+
+.product-card:nth-child(2)::before {
+    background: linear-gradient(90deg, #ec4899, #f97316);
+}
+.product-card:nth-child(3)::before {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+}
+.product-card:nth-child(4)::before {
+    background: linear-gradient(90deg, #10b981, #eab308);
+}
+
+/* Sale badge */
+.product-tag {
+    background: linear-gradient(135deg, #f97316, #ec4899) !important;
+    color: #fff !important;
+}
+
+/* Search focus */
+.search-box input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 4px rgba(124,58,237,.10);
+}
+
+/* Flash deal with multiple colour glows */
+.deal-box {
+    background:
+        radial-gradient(circle at 10% 80%, rgba(249,115,22,.38), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(6,182,212,.38), transparent 28%),
+        radial-gradient(circle at 60% 100%, rgba(236,72,153,.28), transparent 30%),
+        linear-gradient(135deg, #1e1b4b, #172554 50%, #134e4a);
+}
+
+/* Countdown boxes */
+.time-box:nth-child(1) {
+    border-color: rgba(236,72,153,.35);
+    background: rgba(236,72,153,.12);
+}
+.time-box:nth-child(2) {
+    border-color: rgba(6,182,212,.35);
+    background: rgba(6,182,212,.12);
+}
+.time-box:nth-child(3) {
+    border-color: rgba(249,115,22,.35);
+    background: rgba(249,115,22,.12);
+}
+
+/* Review cards */
+.review:nth-child(1) { border-top: 4px solid #7c3aed; }
+.review:nth-child(2) { border-top: 4px solid #06b6d4; }
+.review:nth-child(3) { border-top: 4px solid #ec4899; }
+
+/* Newsletter */
+.newsletter-box {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 0% 100%, rgba(124,58,237,.14), transparent 30%),
+        radial-gradient(circle at 100% 0%, rgba(6,182,212,.14), transparent 30%),
+        var(--surface);
+}
+
+.newsletter-box::before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #7c3aed, #06b6d4, #10b981, #eab308, #f97316, #ec4899);
+}
+
+/* Footer social links */
+.footer-links a:hover {
+    color: #67e8f9;
+}
+
+/* Dark mode keeps the colourful accents */
+[data-theme="dark"] {
+    --bg: #080b16;
+    --surface: #111827;
+    --surface-2: #182235;
+    --text: #f8fafc;
+    --muted: #a5b0c2;
+    --border: #293449;
+}
+
+/* Subtle colourful glow on hover */
+.product-card:hover,
+.category-card:hover,
+.benefit:hover,
+.review:hover {
+    box-shadow:
+        0 18px 50px rgba(124,58,237,.10),
+        0 10px 30px rgba(6,182,212,.07);
+}
+
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -1169,7 +1400,7 @@ a {
 ====================================================== -->
 
 <div class="top-bar">
-    <i class="fa-solid fa-bolt"></i>
+    <em class="fa-solid fa-bolt"></em>
     Free shipping on orders over $75 · New arrivals every week
 </div>
 
@@ -1197,7 +1428,7 @@ a {
         <div class="nav-actions">
 
             <button class="icon-btn" onclick="toggleTheme()" title="Theme">
-                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <em class="fa-solid fa-moon" id="themeIcon"></em>
             </button>
 
             <button class="icon-btn" onclick="showToast('Wishlist opened')">
