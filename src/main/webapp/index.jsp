@@ -1169,7 +1169,7 @@ a {
 ====================================================== -->
 
 <div class="top-bar">
-    <em class="fa-solid fa-bolt"></em>
+    <i class="fa-solid fa-bolt"></i>
     Free shipping on orders over $75 · New arrivals every week
 </div>
 
@@ -1197,7 +1197,7 @@ a {
         <div class="nav-actions">
 
             <button class="icon-btn" onclick="toggleTheme()" title="Theme">
-                <em class="fa-solid fa-moon" id="themeIcon"></em>
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
             </button>
 
             <button class="icon-btn" onclick="showToast('Wishlist opened')">
